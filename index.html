@@ -56,20 +56,57 @@
     */
 
     /* 👉 Task 1 - [HINT] only the flex container needs to be manipulated */
+    [id^=flexContainer] {
+      display: flex;
+    }
 
     /* 👉 Task 2 - [HINT] the flex container needs to change direction */
+    #flexContainer1 {
+      flex-direction: column;
+    }
 
     /* 👉 Task 3 - [HINT] the flex direction can be reversed */
+    #flexContainer2 {
+      flex-direction: column-reverse;
+    }
 
     /* 👉 Task 4 - [HINT] the flex items need a new order */
-
+    #flexContainer3 {
+      display: flex;
+      flex-direction: row;
+    }
+    #flexContainer3 .flexItem:nth-child(1) {
+      order: 3;
+    }
+    #flexContainer3 .flexItem:nth-child(2) {
+      order: 1;
+    }
+    #flexContainer3 .flexItem:nth-child(3) {
+      order: 2;
+    }
+    #flexContainer3 .flexItem:nth-child(4) {
+      order: 4;
+    }
+    
     /* 👉 Task 5 - [HINT] research align-self */
+    #flexContainer4 .flexItem:nth-child(1) {
+      align-self: flex-end;
+    }
 
     /* 👉 Task 6 - [HINT] flex items can be flex containers */
+    #flexContainer5 .flexItem {
+      display: flex;
+    }
 
     /* 👉 Task 7 - [HINT] research flex-grow */
+    #flexContainer6 .flexItem {
+      flex-grow: 1;
+    }
 
     /* 👉 Task 8 - [HINT] you got this! */
+    #flexContainer7 {
+      justify-content: space-between;
+    }
 
 
     /*
@@ -77,6 +114,72 @@
     Revisit the Module Project of HTML & CSS II and re-style it using Flexbox.
     Prior to starting, remove the "inline-block" declarations, which were a workaround to make divs fall in rows.
     */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* 👉 Task 3 - Target the element with id headerTop.
+    Apply white color to the text, some padding using px or rem units, and a dark background color. */
+    #headerTop {
+      background-color: #222;
+      color: white;
+      padding: 10px;
+    }
+
+    /* 👉 Task 4 - Target the divs that are directly nested underneath the id headerTop.
+    Make them display as inline block, instead of block.
+    This will make them render on the same line. */
+    #headerTop > div {
+      display: inline-block;
+    }
+
+    /* 👉 Task 5 - Target the spans that are nested inside the id headerTop.
+    Make them have some margin on the right.
+    This will prevent the spans from crashing against one another. */
+    #headerTop span {
+      margin-right: 8px;
+    }
+
+    /* 👉 Task 6 - Target the first span nested inside the element with id headerTop.
+    Make it have a font weight of bold, and transform the text to uppercase. */
+    #headerTop .logo {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* 👉 Task 7 - Target the id headerBottom.
+    Give it a bottom border of 1 pixel, solid gray, and a little bit of padding using px or rem units. */
+    #headerBottom {
+      border-bottom: 1px solid gray;
+      padding: 10px;
+    }
+
+    /* 👉 Task 8 - Target the divs that are nested directly inside the element with id headerBottom.
+    Make them display as inline block, instead of block.
+    This will cause them to render on the same line.
+    You can consolidate this rule with the one on step. 4 */
+    #headerBottom > div {
+      display: inline-block;
+    }
+
+    /* 👉 Task 9 - Target the "Compose" button, although note it's a div instead an actual button.
+    Give it color, bold text, background, padding, border radius, margin right, and a cursor of pointer. */
+    .blue-btn {
+      color: white;
+      font-weight: bold;
+      background: #007bff;
+      padding: 5px 15px;
+      border-radius: 5px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    /* 👉 Task 10 - Research how to remove all the default styling of button elements.
+    Target the button elements inside the element with id headerBottom.
+    Remove all their styling, give them a bit of margin to the right, and a cursor of pointer. */
+    #headerBottom button {
+      margin-right: 1rem;
+    }
 
     /* ❗ 👉 WORK ABOVE THIS LINE! */
     /* ❗ 👉 WORK ABOVE THIS LINE! */
